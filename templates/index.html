@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KingParking</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Unbounded:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href={{style}}>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <a href="" class="logo">
+                        <img src={{logo}} alt="KP" class="logo__img">
+                    </a>
+                </div>
+                <ul class="menu__contacts offset-xl-7 offset-md-6 offset-sm-4 offset-0 col-12 col-md-5 col-sm-7 col-xl-4">
+                    <li class="menu__contacts--item">
+                        <a href="mailto:kingparking@inbox.ru" class="menu__contacts-link">kingparking@inbox.ru</a>
+                    </li>
+                    <li class="menu__contacts--item">
+                        <a href="tel:89156577027" class="menu__contacts-link">+7 (915) 657 70 27</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="first-screen">
+        <div class="offer">
+            <div class="container">
+                <div class="row">
+                    <p class="col-lg-9 col-12 offer__text title">пара кликов&nbsp;&mdash; и&nbsp;проблема с&nbsp;поиском парковки решена</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <a href="/booking" class="see-spots">
+                <p class="see__text">Посмотреть <br> места <img class="see__arrow" src={{arrow}} alt="перейти"></p>
+            </a>
+        </div>
+    </div>
+    <div class="why" id="why">
+        <div class="container">
+            <div class="row">
+                <p class="col-10 title why__title">Почему мы?</p>
+            </div>
+            <div class="row">
+                <p class="col-md-6 col-12 about__text">«King Parking» - единственный сервис по поиску, просмотру, сравнению стоимости и бронированию парковочных мест в городе Смоленске. <br><br>
+                    Проблема поиска парковочных мест с каждым днем становится всё актуальнее. Наш сервис позволяет водителю максимально просто заранее позаботиться о стоянке для своего автомобиля.
+                    </p>
+                <div class="col-md-6 col-12 why__drop-downs">
+                    <div class="why__drop-down">
+                        <div class="drop-down__wrap">
+                            <p class="drop-down__name">Клиентам</p>
+                            <div class="drop-down__icon clients__icon"></div>
+                        </div>
+                        <p class="is-hidden drop-down__text drop-down__text--clients">Чтобы забронировать парковочное место, достаточно воспользоваться простой инструкцией: <br><br>
+                            1)	Нажмите на кнопку «Посмотреть места»<br><br>
+                            2)	Выберите парковочный комплекс<br><br>
+                            3)	Забронируйте любое свободное место<br><br>
+                            4)	Получите QR-код по ссылке или на e-mail<br><br>
+                            5)	Подъезжайте к парковочному комплексу<br><br> 
+                            6)	Предъявите QR-код паркомату или охраннику<br><br> 
+                            7)	Проезжайте на стоянку
+                            </p>
+                    </div>
+                    <div class="why__drop-down">
+                        <div class="drop-down__wrap">
+                            <p class="drop-down__name">Владельцам</p>
+                            <div class="drop-down__icon owners__icon"></div>
+                        </div>
+                        <div class="owners__wrap is-hidden">
+                            <p class="drop-down__text drop-down__text--owners">Перейдите на вкладку «Вход в ЛК Владельца», затем зарегистрируйтесь и далее добавьте информацию о Ваших парковочных местах.</p>
+                            <a href="owner_login" class="owners__link">Вход в лк владельца <img src={{owners}} alt="перейти"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="book is-hidden">
+        <div class="container">
+            <a href="" class="book__btn lk-btn">Забронировать</a>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1 col-2">
+                    <a href="/" class="logo">
+                        <img src={{logo}} alt="KP" class="logo__img">
+                    </a>
+                </div>
+                <ul class="offset-sm-4 offset-0 col-sm-4 col-12 footer__list">
+                    <li class="footer__list-item">
+                        <a href="/#why" class="footer__list-link">О нас</a>
+                    </li>
+                    <li class="footer__list-item">
+                        <a href="owner_login" class="footer__list-link">Вход в лк владельца</a>
+                    </li>
+                </ul>
+                <ul class="col-sm-3 col-12 footer__list">
+                    <li class="footer__list-contacts footer__list-header">Контакты</li>
+                    <li class="footer__list-contacts">
+                        <a href="mailto:kingparking@inbox.ru" class="footer__contacts-link">kingparking@inbox.ru</a>
+                    </li>
+                    <li class="footer__list-contacts">
+                        <a href="tel:89156577027" class="footer__contacts-link">+7 (915) 657 70 27</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+    <script src={{script}}></script>
+</body>
+</html>
