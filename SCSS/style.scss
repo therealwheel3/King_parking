@@ -1,0 +1,456 @@
+@import 'nullStyle';
+
+.header {
+    padding: 40px 0;
+    border-bottom: 1px solid #fff;
+}
+.menu__contacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-screen {
+    height: calc(100vh - 120px);
+    background: url(static/lk-bg.png) no-repeat center / cover;
+    position: relative;
+}
+
+.offer {
+    width: 100vw;
+    background: #000;
+    padding: 60px 0;
+}
+.title {
+    font-family: 'Unbounded', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.see-spots {
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 300px;
+    background: #C24905;
+    border: 7px solid #FFFFFF;
+    position: absolute;
+    bottom: 50px;
+    &:hover {
+        background: #000;
+    }
+}
+.see__text {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.see__arrow {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.drop-down__name {
+    font-family: 'Unbounded', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+.why__drop-down {
+    width: 100%;
+    padding: 35px 10px;
+    border-bottom: 1px solid #fff;
+    &:first-child {
+        border-top: 1px solid #fff;
+    }
+}
+.drop-down__text {
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+.drop-down__wrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.is-hidden {
+	display: none;
+}
+.drop-down__icon:after,
+.drop-down__icon:before {
+	content: "";
+	width: 29px;
+	height: 4px;
+	border-radius: 1px;
+	background-color: #fff;
+	display: block;
+	position: absolute;
+	transition: all .2s ease-in-out;
+	opacity: 1;
+	contain: strict;
+}
+.drop-down__icon {
+    position: absolute;
+    right: 10px;
+    margin-left: 20px;
+    min-width: 30px;
+    min-height: 30px;
+}
+.drop-down__icon:before {
+	transform: rotate(-90deg);
+    will-change: translate,rotate;
+}
+.drop-down__icon:after {
+    will-change: translate,opacity;
+}
+.drop-down__icon.open:before{ 
+    transform:translate(-50%,-50%) rotate(-0deg);
+    width:0;
+}
+.about__drop-down { 
+    width: 100%;
+    align-items: center;
+}
+.owners__link {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border: 2px solid #fff;
+    padding: 20px 30px;
+    font-family: 'Unbounded', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.why {
+    padding-top: 90px;
+}
+.why__title {
+    margin-bottom: 60px;
+}
+.about__text {
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.spots {
+    margin-top: 90px;
+}
+.parking-spot {
+    cursor: pointer;
+    margin-right: 20px;
+    background: #fff;
+    height: 200px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 32px;
+}
+.is-taken {
+    opacity: 0.4;
+}
+.chosen {
+    background: #FF9E0F;
+}
+.book {
+    background: #000;
+    width: 100vw;
+    padding: 50px 0;
+    position: fixed;
+    bottom: 0;
+}
+.lk {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 100vh;
+    min-height: 550px;
+}
+.lk__wrap {
+    background: #000;
+    padding-right: 20px;
+}
+.lk__title {
+    margin-bottom: 60px;
+}
+.form-group {
+    display: block;
+    width: 80%;
+}
+.form-control {
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-bottom: 10px;
+    &:first-child {
+        margin-bottom: 50px;
+    }
+}
+.lk-btn {
+    margin-top: 60px;
+    background: transparent;
+    border-radius: 0;
+    border: 2px solid #fff;
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 20px 70px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+    &:hover {
+        background: #fff;
+        color: #000;
+    }
+}
+.lk__img {
+    object-fit: cover;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    z-index: 0;
+}
+.footer {
+    padding: 50px 0;
+    border-top: 1px solid #fff;
+}
+.footer__list-item {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+.footer__list-contacts {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+.footer__list-header {
+    font-family: 'Unbounded', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #fff;
+}
+@media (max-height: 700px) and (min-width: 1000px) {
+    .first-screen {
+        height: 1000px;
+    }
+}
+@media (max-height: 550px) and (min-width: 800px) {
+    .first-screen {
+        height: 600px;
+    }
+}
+@media (max-width: 1400px) {
+    .title {
+        font-size: 36px;
+    }
+    .about__text {
+        font-size: 18px;
+    }
+    .drop-down__name {
+        font-size: 20px;
+    }
+    .drop-down__text {
+        font-size: 16px;
+    }
+    .owners__link {
+        font-size: 18px;
+    }
+    .footer__list-item {
+        font-size: 14px;
+    }
+    .footer__list-header {
+        font-size: 14px;
+    }
+    .footer__list-contacts {
+        font-size: 14px;
+    }
+}
+@media (max-width: 1200px) {
+    .offer {
+        padding: 40px 0;
+    }
+    .title {
+        font-size: 32px;
+    }
+    .see__text {
+        font-size: 16px;
+    }
+    .see__arrow {
+        height: 17px;
+    }
+    .see-spots {
+        height: 200px;
+        width: 200px;
+        border: 5px solid #FFFFFF;
+        bottom: 30px;
+    }
+    .about__text {
+        font-size: 16px;
+    }
+    .drop-down__text {
+        font-size: 14px;
+    }
+    .lk__img {
+        width: 35%;
+    }
+}
+@media (max-width: 992px) {
+    .menu__contacts--item {
+        font-size: 12px;
+    }
+    .title {
+        font-size: 28px;
+    }
+    .owners__link {
+        font-size: 16px;
+    }
+    .footer__list-item {
+        font-size: 12px;
+    }
+    .footer__list-header {
+        font-size: 12px;
+    }
+    .footer__list-contacts {
+        font-size: 12px;
+    }
+    .lk {
+        min-height: fit-content;
+    }
+    .lk__title {
+        margin-bottom: 40px;
+    }
+    .form-group {
+        width: 100%;
+    }
+    .form-control {
+        font-size: 16px;
+        &:first-child {
+            margin-bottom: 30px;
+        }
+    }
+    .lk-btn {
+        margin-top: 30px;
+        font-size: 16px;
+        padding: 15px 40px;
+    }
+}
+@media (max-width: 768px) {
+    .why {
+        padding-top: 50px;
+    }
+    .why__title {
+        margin-bottom: 40px;
+    }
+    .why__drop-down:first-child {
+        margin-top: 40px;
+    }
+    .lk__img {
+        display: none;
+    }
+    .lk {
+        height: fit-content;
+        padding: 60px 0;
+    }
+    .spots {
+        margin-top: 40px;
+    }
+    .parking-spot {
+        margin-right: 15px;
+        font-size: 24px;
+    }
+}
+@media (max-width: 576px) {
+    .header {
+        padding: 30px 0 10px;
+    }
+    .title {
+        font-size: 18px;
+    }
+    .offer {
+        padding: 30px 0;
+    }
+    .see__text {
+        font-size: 12px;
+    }
+    .see-spots {
+        height: 150px;
+        width: 150px;
+        border: 3px solid #FFFFFF;
+    }
+    .see__arrow {
+        height: 10px;
+        margin-left: 5px;
+        margin-top: 4px;
+    }
+    .menu__contacts {
+        margin-top: 20px;
+    }
+    .about__text {
+        font-size: 12px;
+    }
+    .drop-down__name {
+        font-size: 16px;
+    }
+    .drop-down__icon:after, .drop-down__icon:before {
+	width: 20px;
+	height: 3px;
+    }
+    .why__drop-down {
+        padding: 25px 10px;
+    }
+    .drop-down__text {
+        font-size: 12px;
+    }
+    .owners__link {
+        font-size: 14px;
+        padding: 20px 10px;
+    }
+    .footer__list {
+        margin-top: 40px;
+    }
+    .form-control {
+        font-size: 14px;
+    }
+    .lk-btn {
+        font-size: 14px;
+    }
+    .parking-spot {
+        margin-left: 10px;
+        margin-right: 5px;
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+}
