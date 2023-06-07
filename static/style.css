@@ -1,0 +1,863 @@
+@charset "UTF-8";
+/*Обнуляющие стили*/
+/*Очистим все отступы и границы*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  color: #000;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  line-height: 150%;
+}
+
+/*Убираем линии обводки некоторых браузеров*/
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+/*задаем блочными теги Html5*/
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  background: #000;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*задаем наследование шрифтов*/
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a {
+  color: #fff;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #C24905;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.header {
+  padding: 40px 0;
+  border-bottom: 1px solid #fff;
+}
+
+.menu__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.first-screen {
+  height: calc(100vh - 120px);
+  background: url(../img/main-bg.png) no-repeat center/cover;
+  position: relative;
+}
+
+.offer {
+  width: 100vw;
+  background: #000;
+  padding: 60px 0;
+}
+
+.title {
+  font-family: "Unbounded", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.see-spots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 300px;
+  width: 300px;
+  background: #C24905;
+  border: 7px solid #FFFFFF;
+  position: absolute;
+  bottom: 50px;
+}
+.see-spots:hover {
+  background: #000;
+}
+
+.see__text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.see__arrow {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.drop-down__name {
+  font-family: "Unbounded", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.why__drop-down {
+  width: 100%;
+  padding: 35px 10px;
+  border-bottom: 1px solid #fff;
+}
+.why__drop-down:first-child {
+  border-top: 1px solid #fff;
+}
+
+.drop-down__text {
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.drop-down__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.drop-down__icon:after,
+.drop-down__icon:before {
+  content: "";
+  width: 29px;
+  height: 4px;
+  border-radius: 1px;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  contain: strict;
+}
+
+.drop-down__icon {
+  position: absolute;
+  right: 10px;
+  margin-left: 20px;
+  min-width: 30px;
+  min-height: 30px;
+}
+
+.drop-down__icon:before {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  will-change: translate, rotate;
+}
+
+.drop-down__icon:after {
+  will-change: translate, opacity;
+}
+
+.drop-down__icon.open:before {
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+  width: 0;
+}
+
+.about__drop-down {
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.owners__link {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  border: 2px solid #fff;
+  padding: 20px 30px;
+  font-family: "Unbounded", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.why {
+  padding-top: 90px;
+}
+
+.why__title {
+  margin-bottom: 60px;
+}
+
+.about__text {
+  font-weight: 400;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.spots {
+  margin-top: 90px;
+}
+
+.parking-spot {
+  cursor: pointer;
+  margin-right: 20px;
+  background: #fff;
+  height: 200px;
+  margin-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 700;
+  font-size: 32px;
+}
+
+.is-taken {
+  opacity: 0.4;
+}
+
+.chosen {
+  background: #FF9E0F;
+}
+
+.book {
+  background: #000;
+  width: 100vw;
+  padding: 50px 0;
+  position: fixed;
+  bottom: 0;
+}
+
+.lk {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  height: 100vh;
+  min-height: 550px;
+}
+
+.lk__wrap {
+  background: #000;
+  padding-right: 20px;
+}
+
+.lk__title {
+  margin-bottom: 60px;
+}
+
+.form-group {
+  display: block;
+  width: 80%;
+}
+
+.form-control {
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-bottom: 10px;
+}
+.form-control:first-child {
+  margin-bottom: 50px;
+}
+
+.lk-btn {
+  margin-bottom: 20px;
+  background: transparent;
+  border-radius: 0;
+  border: 2px solid #fff;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  padding: 20px 70px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.lk-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+.lk__img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40%;
+  z-index: 0;
+}
+
+.reg-btn {
+  margin-left: 40px;
+  font-family: "Unbounded";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.heading__container {
+  margin-top: 100px;
+}
+
+.my-parking {
+  margin-bottom: 70px;
+}
+
+.my-parking__title {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.my-parking__btn {
+  background: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.my-parking__btn-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.my-parking__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.my-parking__btn-icon:after,
+.my-parking__btn-icon:before {
+  content: "";
+  width: 29px;
+  height: 4px;
+  border-radius: 1px;
+  background-color: #000;
+  display: block;
+  position: absolute;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+  contain: strict;
+}
+
+.my-parking__btn-icon:before {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  will-change: translate, rotate;
+}
+
+.my-parking__btn-icon:after {
+  will-change: translate, opacity;
+}
+
+.my-parking__btn-icon.open:before {
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+          transform: translate(-50%, -50%) rotate(0deg);
+  width: 0;
+}
+
+.add-parking {
+  display: none;
+}
+
+.add-parking__input {
+  position: relative;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.add-parking__input--6 {
+  width: 49%;
+  padding-bottom: 25px;
+}
+.add-parking__input--6:first-child {
+  margin-right: 2%;
+}
+
+.add-parking__input--5 {
+  width: 39%;
+  margin-right: 2%;
+}
+
+.add-parking__input--3 {
+  width: 23%;
+  margin-right: 2%;
+}
+
+.add-parking__btn {
+  background: transparent;
+  border: 2px solid #FFFFFF;
+  font-family: "Unbounded", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.add-parking__row:not(:first-child) {
+  margin-top: 45px;
+}
+.add-parking__row:last-child {
+  margin-bottom: 100px;
+}
+
+.footer {
+  padding: 50px 0;
+  border-top: 1px solid #fff;
+}
+
+.footer__list-item {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.footer__list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.footer__list-contacts {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+}
+.footer__list-contacts:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.footer__list-header {
+  font-family: "Unbounded", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+@media (max-height: 700px) and (min-width: 1000px) {
+  .first-screen {
+    height: 1000px;
+  }
+}
+@media (max-height: 550px) and (min-width: 800px) {
+  .first-screen {
+    height: 600px;
+  }
+}
+@media (max-width: 1400px) {
+  .title {
+    font-size: 36px;
+  }
+  .about__text {
+    font-size: 18px;
+  }
+  .drop-down__name {
+    font-size: 20px;
+  }
+  .drop-down__text {
+    font-size: 16px;
+  }
+  .owners__link {
+    font-size: 18px;
+  }
+  .my-parking__title {
+    font-size: 24px;
+  }
+  .footer__list-item {
+    font-size: 14px;
+  }
+  .footer__list-header {
+    font-size: 14px;
+  }
+  .footer__list-contacts {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1200px) {
+  .offer {
+    padding: 40px 0;
+  }
+  .title {
+    font-size: 32px;
+  }
+  .see__text {
+    font-size: 16px;
+  }
+  .see__arrow {
+    height: 17px;
+  }
+  .see-spots {
+    height: 200px;
+    width: 200px;
+    border: 5px solid #FFFFFF;
+    bottom: 30px;
+  }
+  .about__text {
+    font-size: 16px;
+  }
+  .drop-down__text {
+    font-size: 14px;
+  }
+  .lk__img {
+    width: 35%;
+  }
+  .lk-btn {
+    font-size: 16px;
+    padding: 20px 50px;
+  }
+  .reg-btn {
+    margin-left: 30px;
+    font-size: 16px;
+  }
+  .add-parking__btn {
+    font-size: 18px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .add-parking__input--6 {
+    padding-bottom: 16px;
+  }
+  .my-parking {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .menu__contacts--item {
+    font-size: 12px;
+  }
+  .title {
+    font-size: 28px;
+  }
+  .owners__link {
+    font-size: 16px;
+  }
+  .footer__list-item {
+    font-size: 12px;
+  }
+  .footer__list-header {
+    font-size: 12px;
+  }
+  .footer__list-contacts {
+    font-size: 12px;
+  }
+  .lk {
+    min-height: -webkit-fit-content;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+  .lk__title {
+    margin-bottom: 40px;
+  }
+  .form-group {
+    width: 100%;
+  }
+  .form-control {
+    font-size: 16px;
+  }
+  .form-control:first-child {
+    margin-bottom: 30px;
+  }
+  .lk-btn {
+    margin-top: 30px;
+    padding: 15px 40px;
+  }
+  .my-parking__title {
+    font-size: 18px;
+  }
+  .add-parking__input {
+    font-size: 16px;
+  }
+  .my-parking__btn {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (max-width: 768px) {
+  .why {
+    padding-top: 50px;
+  }
+  .why__title {
+    margin-bottom: 40px;
+  }
+  .why__drop-down:first-child {
+    margin-top: 40px;
+  }
+  .lk__img {
+    display: none;
+  }
+  .lk {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 60px 0;
+  }
+  .spots {
+    margin-top: 40px;
+  }
+  .parking-spot {
+    margin-right: 15px;
+    font-size: 24px;
+  }
+  .my-parking__title {
+    font-size: 16px;
+  }
+  .add-parking__input {
+    font-size: 12px;
+  }
+  .add-parking__input--6 {
+    width: 100%;
+    padding-bottom: 25px;
+  }
+  .add-parking__input--6:first-child {
+    margin-bottom: 30px;
+  }
+  .add-parking__input--5 {
+    width: 49%;
+    margin-right: 2%;
+    margin-bottom: 50px;
+  }
+  .add-parking__input--3 {
+    width: 49%;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  .my-parking {
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .header {
+    padding: 30px 0 10px;
+  }
+  .title {
+    font-size: 18px;
+  }
+  .offer {
+    padding: 30px 0;
+  }
+  .see__text {
+    font-size: 12px;
+  }
+  .see-spots {
+    height: 150px;
+    width: 150px;
+    border: 3px solid #FFFFFF;
+  }
+  .see__arrow {
+    height: 10px;
+    margin-left: 5px;
+    margin-top: 4px;
+  }
+  .menu__contacts {
+    margin-top: 20px;
+  }
+  .about__text {
+    font-size: 12px;
+  }
+  .drop-down__name {
+    font-size: 16px;
+  }
+  .drop-down__icon:after, .drop-down__icon:before {
+    width: 20px;
+    height: 3px;
+  }
+  .why__drop-down {
+    padding: 25px 10px;
+  }
+  .drop-down__text {
+    font-size: 12px;
+  }
+  .owners__link {
+    font-size: 14px;
+    padding: 20px 10px;
+  }
+  .footer__list {
+    margin-top: 40px;
+  }
+  .form-control {
+    font-size: 14px;
+  }
+  .lk-btn {
+    font-size: 14px;
+  }
+  .reg-btn {
+    font-size: 14px;
+    display: block;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+  .parking-spot {
+    margin-left: 10px;
+    margin-right: 5px;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .add-parking__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .add-parking__input {
+    padding-bottom: 15px;
+  }
+  .add-parking__input--6 {
+    width: 85%;
+  }
+  .add-parking__input--5 {
+    width: 85%;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  .add-parking__input--3 {
+    width: 85%;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  .my-parking {
+    margin-bottom: 30px;
+  }
+  .add-parking__btn {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=style.css.map */
